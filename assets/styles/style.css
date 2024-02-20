@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+:root{
+    --cor-primaria:#F3F5FC;
+    --cor-secundaria: rgb(46, 130, 20);
+    --cor-terciaria: #FFFFFF;
+    --cor-sombra:rgb(26, 90, 29);
+    --cor-textoTela: rgb(47, 47, 65);
+
+    --font-titulo:"Fredoka", sans-serif;
+    --font-texto:"Fredoka", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color:var(--cor-primaria);
+}
+header{
+    width: 100%;
+    height: 10px;
+    background-color: var(--cor-secundaria);
+}
+.tela{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 15%;
+    gap:3.2rem;
+    font-family:var(--font-texto);
+    color:var(--cor-textoTela);
+}
+
+.telaPrincipal{
+    position: relative;
+    width: 60%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.telaPrincipalTitulo{
+    color: var(--cor-secundaria);
+    font-size: 3rem;
+    font-family: var(--font-titulo);  
+}
+
+.textoPrincipal{
+    border: none ;
+    resize: none;
+    outline: none;
+    background-color: var(--cor-primaria);
+    color:var(--cor-secundaria);
+    padding: 20px 30px;
+    font-size: 1.6rem;
+    font-family: var(--font-texto);
+    font-weight: 550; 
+    box-shadow: 0.2rem 0.4rem 1rem var(--cor-sombra);
+    border-radius: 20px;
+}
+.textoPrincipal::placeholder{
+    color: var(--cor-secundaria);
+}
+
+.paragrafo{
+    display: flex;
+    font-size: 1.1rem;
+    font-family: var(--font-texto);
+    font-weight: 600;  
+}
+.inconeAjuda{
+    margin-right: 0.5rem;
+    width: 1.3rem;
+    height: 1.1rem;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:34px;
+}
+
+.botaoCodificarDecodificar{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border:2px solid var(--cor-secundaria);
+    width: 50%;
+    text-align: center;
+    border-radius: 24px;
+    font-size: 1.5rem;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: "Fredoka", sans-serif;
+    font-weight: 600;
+    box-shadow: 0.8rem 0.8rem 1rem var(--cor-sombra);
+}
+
+.botaoCodificarDecodificar:hover{
+    cursor: pointer;
+    background-color: var(--cor-secundaria);
+    color:var(--cor-primaria);
+}
+
+.telaSecundaria{
+    display: flex;
+    position: relative;
+    width: 40%;
+    height: 570px;
+    background-color:var(--cor-terciaria);
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 10px 10px 25px var(--cor-sombra);
+}
+
+.telaSecundariaTexto{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    margin:1rem;
+    padding: 15px;
+    max-height: calc(100% - 100px);
+    overflow-y: auto;
+}
+.telaSecundariaTexto::-webkit-scrollbar {
+    width: 10px;
+}
+.telaSecundariaTexto::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background:var(--cor-secundaria);    
+}
+.telaSecundariaTexto::-webkit-scrollbar-track {
+    background: none;
+}
+
+.imagemTelaSecundaria{
+    display: block;
+    width: 20rem;
+    max-width: 100%;
+    margin-top: 2.5rem;
+}
+.escondido{
+    display: none;
+}
+.elementosTextuais{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.2rem;
+    margin-bottom:1.5rem;
+}
+.botaoCopiar{
+    display: none;
+    width: 80%;
+    text-align: center;
+    border-radius: 24px;
+    border: none;
+    font-size: 1.5rem;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor-primaria);
+    background-color: var(--cor-secundaria);
+    font-family: "Fredoka", sans-serif;
+    font-weight: 600;
+    box-shadow:0.8rem 0.8rem 1rem var(--cor-sombra);  
+    position: relative;
+    bottom: 30px;
+    margin-top: auto;
+}
+.botaoCopiar:hover{
+    cursor: pointer;
+    border:2px solid var(--cor-secundaria);
+    color: var(--cor-secundaria);
+    background-color: var(--cor-primaria);  
+}
+
+.rodape{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--cor-primaria);
+    background-color: var(--cor-secundaria);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--font-texto);
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 4.3rem; 
+    box-shadow: 0.1rem -0.2rem 1.2rem var(--cor-sombra);
+}
+.rodapeRedes{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rodapeLink{
+    color: var(--cor-primaria);
+    text-decoration: none;
+    padding-left: 50px;
+}
+.rodapeLink:hover{
+    font-weight: 800;
+}
+
+@media (max-width: 1100px) {
+    .tela {
+        padding: 2% 3%; 
+        gap: 16px;
+        flex-direction: column;
+    }
+
+    .telaPrincipal {
+        width: 95%;
+    }
+    .botoes{
+        flex-direction: column;
+        gap:7px;
+    }
+    .telaSecundaria {
+        margin-top: 6%;
+        width: 95%;
+        height: 500px;
+    }
+    .imagemTelaSecundaria{
+        width: 15rem;
+    }
+    .botaoCopiar {
+        width: 60%;
+    }
+}
